@@ -8,14 +8,15 @@ const axios = require("axios")
 module.exports = async (req, res) => {
 
   const q = req.query.q
+  const text = req.query.text
 
-  if (!q) {
+  if (!text) {
     return res.status(400).json({
       error: "Mau nanya apa lu njir"
     })
   }
 
-  const url = `https://itzpire.com/ai/blackbox-ai?q=${q}`
+  const url = `https://btch.us.kg/openai?text=${text}`
 
   try {
     const response = await axios.get(url)
