@@ -1,15 +1,18 @@
+const fetch = require("node-fetch")
 const axios = require("axios")
 
 module.exports = async (req, res) => {
 
 
-  const url = `https://www.uuidgenerator.net/api/version7`
-
-  try {
-    const response = await axios.get(url)
-    res.status(200).json({
-      response
-    })
+const data = await fetch(`https://www.uuidgenerator.net/api/version7`)
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+             	author: 'XzyyMDS',
+                 result
+             })
+         })
   } catch (error) {
     res.status(500).json({
       error: "Ada masalah, coba lagi nanti"
