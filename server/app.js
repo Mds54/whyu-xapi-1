@@ -33,7 +33,7 @@ app.use(session({
 
 /* !=== PAGE ===! */
 app.get("/", limit, (req, res) => {
-    res.sendFile(path.join(__dirname, "../pages/404.html"))
+    res.sendFile(path.join(__dirname, "../pages/dashboard.html"))
 })
 
 app.get("/login", limit, (req, res) => {
@@ -70,6 +70,10 @@ app.get("/blekbok", limit, async (req, res) => {
 
 app.get("/tiktokDL", limit, async (req, res) => {
     require("../pages/fitures/tiktok.js")(req, res)
+})
+
+app.get("/uuidgenerator", limit, async (req, res) => {
+    require("../pages/fitures/uuidgenerator.js")(req, res)
 })
 
 app.get("/instagramDL", limit, async (req, res) => {
