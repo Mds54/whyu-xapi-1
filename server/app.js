@@ -72,12 +72,16 @@ app.get("/tiktokDL", limit, async (req, res) => {
     require("../pages/fitures/tiktok.js")(req, res)
 })
 
+app.get("/instagramDL", limit, async (req, res) => {
+    require("../pages/fitures/instagram.js")(req, res)
+})
+
 app.get("/uuidgenerator", limit, async (req, res) => {
     require("../pages/fitures/uuidgenerator.js")(req, res)
 })
 
-app.get("/instagramDL", limit, async (req, res) => {
-    require("../pages/fitures/instagram.js")(req, res)
+app.get("/translate", limit, async (req, res) => {
+    require("../pages/fitures/translate.js")(req, res)
 })
 
 app.use((req, res, next) => {
