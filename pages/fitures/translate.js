@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
     res.status(200).json({
           status : true,
     creator : `XzyyMDS`,
-      data
+      result : `${data}`
     })
   } catch (error) {
     res.status(500).json({
