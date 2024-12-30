@@ -32,9 +32,9 @@ module.exports = async (req, res) => {
     const data = response.translated
 
     res.status(200).json({
-          status : true,
-    creator : `XzyyMDS`,
-      result : `${data}`
+          status: true,
+    creator: `XzyyMDS`,
+      result: data
     })
   } catch (error) {
     res.status(500).json({
