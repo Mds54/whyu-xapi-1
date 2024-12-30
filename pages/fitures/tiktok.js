@@ -22,7 +22,9 @@ module.exports = async (req, res) => {
     const videoUrlNoWatermark = data.data.find(item => item.type === "nowatermark").url
 
     res.status(200).json({
-      data: videoUrlNoWatermark
+    status : true,
+    creator : `XzyyMDS`,
+    data: videoUrlNoWatermark
     })
   } catch (error) {
     res.status(500).json({
