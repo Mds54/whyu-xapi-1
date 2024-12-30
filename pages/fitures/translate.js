@@ -11,12 +11,16 @@ module.exports = async (req, res) => {
 
   if (!q) {
     return res.status(400).json({
+          status : true,
+    creator : `XzyyMDS`,
       error: "Masukkan Kode Bahasa!"
     })
   }
   
   if (!text) {
   return res.status(400).json({
+        status : true,
+    creator : `XzyyMDS`,
   error: "Mana Teksnya"
   })
   }
@@ -28,10 +32,14 @@ module.exports = async (req, res) => {
     const data = response.translated
 
     res.status(200).json({
+          status : true,
+    creator : `XzyyMDS`,
       data
     })
   } catch (error) {
     res.status(500).json({
+          status : true,
+    creator : `XzyyMDS`,
       error: "Ada masalah, coba lagi nanti"
     })
   }
